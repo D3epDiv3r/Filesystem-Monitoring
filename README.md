@@ -1,2 +1,2 @@
 # Filesystem-Monitoring
-Basic Filesystem or Directory Monitoring tool for Windows built using Python's Watchdog module.
+Basic Filesystem or Directory Event Monitoring tool for Windows built using Python's API Library "Watchdog".
