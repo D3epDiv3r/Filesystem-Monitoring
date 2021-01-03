@@ -17,7 +17,7 @@ file_name = "filesystem_monitoring.txt"
 storage_path = path_to_write + '\\' + file_name
 
 if not os.path.exists(path_to_write):
-    print("The Path does not exist")
+    msg.showerror('Path Error!', f"[ !! ]The Path to write directory {path_to_write} does not exist.")
     sys.exit(1)
 
 class Handler(FileSystemEventHandler):
@@ -37,6 +37,7 @@ class Handler(FileSystemEventHandler):
             file.write(f"[>>] Renamed {event.src_path} to {event.dest_path}")
             file.write("\n")
 
+b1 = ''
 event_handler = Handler()
 observer = Observer()
 window = tkinter.Tk()
@@ -55,24 +56,34 @@ def dir_watcher(watch_directory):
 
 process_ids = []
 def start_observer():
+    global b1
     global process_ids
     msg.showinfo('Starting Observer', 'Monitoring will begin in the background if path(s) exist')
+    b1["text"] = "Started Monitoring"
+    b1["state"] = "disabled"
+    b1["cursor"] = "arrow"
     for watch_directory in directories_to_watch:
         if not os.path.exists(watch_directory.strip(' ')):
-            msg.showerror('Path Error!', f"The Directory or Path {watch_directory} does not exist. Restart program after fixing path.")
+            msg.showerror('Path Error!', f"[ !! ] The Directory or Path {watch_directory} does not exist. Restart program after fixing path.")
+            stop_observer()
             break
         mp = multiprocessing.Process(target=dir_watcher, args=(watch_directory.strip(' '),))
         mp.start()
         process_ids.append(mp.pid)
 
 def stop_observer():
+    global b1
     global process_ids
     for kill_id in process_ids:
         os.kill(kill_id, signal.SIGINT)
     process_ids = []
-    msg.showinfo('Stopping Observer', f"[+] All Observers have been stopped. Saved output to {path_to_write}\{file_name}")
+    b1["text"] = "Start monitoring"
+    b1["state"] = "normal"
+    b1["cursor"] = "hand2"
+    msg.showinfo('Stopping Observer', f"[ - ] All Observers have been stopped.")
 
 def open_window():
+    global b1
     window.title("Filesystem Monitoring")
     app_width = 400
     app_height = 300
@@ -81,8 +92,8 @@ def open_window():
     x = (screen_width / 2) - (app_width / 2)
     y = (screen_height / 2) - (app_height / 2)
     window.geometry(f'{app_width}x{app_height}+{int(x)}+{int(y)}')
-    b1 = tkinter.Button(window, text="Start monitoring", command=start_observer, fg="green")
-    b2 = tkinter.Button(window, text="Stop monitoring", command=stop_observer, fg="red")
+    b1 = tkinter.Button(window, text="Start monitoring", command=start_observer, fg="green", cursor="hand2")
+    b2 = tkinter.Button(window, text="Stop monitoring", command=stop_observer, fg="red", cursor="hand2")
     b1.place(relx = 0.5, rely = 0.4, anchor = "center")
     b2.place(relx = 0.5, rely = 0.6, anchor = "center")
     window.mainloop()
