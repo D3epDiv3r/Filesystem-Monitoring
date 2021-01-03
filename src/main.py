@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 
-import tkinter
-from tkinter import messagebox as msg
+try:
+    import tkinter as tk
+    from tkinter import messagebox as msg
+except:
+    import Tkinter as tk
+    from Tkinter import messagebox as msg
 import os, sys
 import signal
 import time
@@ -40,7 +44,7 @@ class Handler(FileSystemEventHandler):
 b1 = ''
 event_handler = Handler()
 observer = Observer()
-window = tkinter.Tk()
+window = tk.Tk()
 
 def dir_watcher(watch_directory):
     observer.schedule(event_handler, watch_directory, recursive=True)
@@ -82,6 +86,15 @@ def stop_observer():
     b1["cursor"] = "hand2"
     msg.showinfo('Stopping Observer', f"[ - ] All Observers have been stopped.")
 
+def exit_application():
+    response = msg.askyesno('Close Application', f'Are you sure you want to exit the application? \n\n "YES" - by clicking "Yes", the app will close and all observers will be stopped. \n\n "NO" - by clicking "No", the app will be minimized to the taskbar and continue running in the background', icon='warning')
+    if response == True:
+        stop_observer()
+        window.destroy()
+    elif response == False:
+        msg.showinfo('Minimizing window','This window will now be minimized to the taskbar and continue running in the background')
+        window.iconify()
+
 def open_window():
     global b1
     window.title("Filesystem Monitoring")
@@ -92,10 +105,11 @@ def open_window():
     x = (screen_width / 2) - (app_width / 2)
     y = (screen_height / 2) - (app_height / 2)
     window.geometry(f'{app_width}x{app_height}+{int(x)}+{int(y)}')
-    b1 = tkinter.Button(window, text="Start monitoring", command=start_observer, fg="green", cursor="hand2")
-    b2 = tkinter.Button(window, text="Stop monitoring", command=stop_observer, fg="red", cursor="hand2")
+    b1 = tk.Button(window, text="Start monitoring", command=start_observer, fg="green", cursor="hand2")
+    b2 = tk.Button(window, text="Stop monitoring", command=stop_observer, fg="red", cursor="hand2")
     b1.place(relx = 0.5, rely = 0.4, anchor = "center")
     b2.place(relx = 0.5, rely = 0.6, anchor = "center")
+    window.protocol("WM_DELETE_WINDOW", exit_application)
     window.mainloop()
 
 if __name__ == '__main__':
