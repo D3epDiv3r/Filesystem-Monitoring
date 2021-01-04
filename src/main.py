@@ -10,8 +10,6 @@ import os, sys
 import signal
 import time
 import multiprocessing
-from pathlib import Path
-from PIL import Image, ImageTk
 # Use pip3 install watchdog to install watchdog 
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
