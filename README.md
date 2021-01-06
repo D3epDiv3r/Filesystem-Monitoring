@@ -101,7 +101,7 @@ python main.py
 
 Ignore this step if you want the program to launch on Startup/Login.
 
-1. Comment out Line 44 and Line 45
+1. __Comment out Line 44 and Line 45__
 
 Change From:
 
@@ -117,7 +117,7 @@ To This:
 # check_path_exists(startup_path)
 ```
 
-2. Comment out Lines 82 - 85
+2. __Comment out Lines 82 - 85__
 
 Change From:
 
@@ -137,7 +137,7 @@ To This:
 #         bat_file.write(f'python {file_path}')
 ```
 
-3. Finally, Comment out Line 165
+3. __Finally, Comment out Line 165__
 
 Change From:
 
