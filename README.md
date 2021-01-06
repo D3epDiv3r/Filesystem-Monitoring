@@ -33,19 +33,11 @@ python -m pip install -U watchdog
 To use this program, all you need to do is change the paths below in the "__`main.py`__" to the corresponding paths on your PC.
 
 ```Python
-# NOTE: GENERAL FOLDER NAMING CONVENTION:
-### NOTE -- Ensure to include "2 (TWO)" backslash in ALL PATHS BELOW 
-### NOTE -- e.g "C:\Users\explo\Desktop" should be "C:\\Users\\explo\\Desktop"
-
-# Include directory or directories you want to moitor within double quotes and square brackets: directories_to_watch = ["your_dir"]
-# Seperate Multiple directories with comma ',' e.g directories_to_watch = ["C:\\your_dir_1", "F:\\your_dir_2"]
 directories_to_watch = ["C:\\your_dir_1", "C:\\your_dir_2", "F:\\your_dir_3", "F:\\your_dir_4"]
-path_to_write = "C:\\your_dir_5" # Ensure this path is not included in watched directory above
-file_name = "filesystem_monitoring.txt" # The filename you want to use to store the event log
+path_to_write = "C:\\your_dir_5"
+file_name = "filesystem_monitoring.txt"
 storage_path = path_to_write + '\\' + file_name
-# Replace path to this "main.py" file with your systems path to "main.py" to start program when you Login
 start_file_on_login_path = "C:\\Users\\username\\path_to_main.py_file_on_your_pc\\filesystem_monitoring\\src\\main.py"
-# Replace with your startup folder path -> press WinKey + R, then type shell:startup and hit enter to get path.
 startup_path = 'C:\\Users\\username\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup'
 ```
 
