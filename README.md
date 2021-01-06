@@ -97,7 +97,7 @@ Navigate to the `src > main.py` location. In your terminal simply type the comma
 python main.py
 ```
 
-<img src="assets/img/ezgif.com-gif-maker.JPG">
+<img src="assets/img/ezgif.com-gif-maker.gif">
 
 
 ## Disable Startup Functionality
