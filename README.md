@@ -47,12 +47,14 @@ __NOTE__: Ensure to include "__2 (TWO)__" __Backslash__ in ALL PATHS BELOW e.g "
 
 - The `directories_to_watch` list simply holds all the specified directories you intend to monitor:
 
-    Include directory or directories you want to moitor within double quotes and square brackets: directories_to_watch = ["C:\\your_dir"]
-    Seperate Multiple directories with comma ',' e.g directories_to_watch = ["C:\\your_dir_1", "F:\\your_dir_2"]
+    Include directory or directories you want to moitor within double quotes and square brackets: 
+    `directories_to_watch = ["C:\\your_dir"]`
 
-    ```Python
-    directories_to_watch = ["C:\\Users\\explo1\\Documents", "C:\\Users\\explo1\\Pictures", "F:\\Programming"]
-    ```
+    Seperate Multiple directories with comma ',': `directories_to_watch = ["C:\\your_dir_1", "F:\\your_dir_2"]`
+
+```Python
+directories_to_watch = ["C:\\Users\\explo1\\Documents", "C:\\Users\\explo1\\Pictures", "F:\\Programming"]
+```
 
 
 The `path_to_write` variable is the path to which the log event file will be stored e.g when a file is "created" or "deleted" the log event will be stored in a text file, and this is the path the log file will be saved. __NOTE__: Ensure this path is **not included** in the `directories_to_watch` list above.
