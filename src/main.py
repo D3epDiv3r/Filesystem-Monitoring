@@ -17,7 +17,7 @@ from watchdog.events import FileSystemEventHandler
 
 # NOTE: GENERAL FOLDER NAMING CONVENTION:
 ### NOTE -- Ensure to include "2 (TWO)" backslash in ALL PATHS BELOW 
-### NOTE -- e.g "C:\Users\explo\Desktop" should be "C:\\Users\\explo\\Desktop"
+### NOTE -- e.g "C:\Users\explo1\Desktop" should be "C:\\Users\\explo1\\Desktop"
 
 # Include directory or directories you want to moitor within double quotes and square brackets: directories_to_watch = ["your_dir"]
 # Seperate Multiple directories with comma ',' e.g directories_to_watch = ["C:\\your_dir_1", "F:\\your_dir_2"]
