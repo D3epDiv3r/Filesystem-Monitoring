@@ -50,9 +50,9 @@ __NOTE__: Ensure to include "__2 (TWO)__" __Backslash__ in ALL PATHS BELOW e.g "
     Include directory or directories you want to moitor within double quotes and square brackets: directories_to_watch = ["C:\\your_dir"]
     Seperate Multiple directories with comma ',' e.g directories_to_watch = ["C:\\your_dir_1", "F:\\your_dir_2"]
 
-```Python
-directories_to_watch = ["C:\\Users\\explo1\\Documents", "C:\\Users\\explo1\\Pictures", "F:\\Programming"]
-```
+    ```Python
+    directories_to_watch = ["C:\\Users\\explo1\\Documents", "C:\\Users\\explo1\\Pictures", "F:\\Programming"]
+    ```
 
 
 The `path_to_write` variable is the path to which the log event file will be stored e.g when a file is "created" or "deleted" the log event will be stored in a text file, and this is the path the log file will be saved. __NOTE__: Ensure this path is **not included** in the `directories_to_watch` list above.
@@ -81,7 +81,7 @@ To disable start-up functionality follow the instructions [Here](https://github.
 
 The `startup_path` this is the path to your PC's Startup directory. To find Startup folder path -> press `WinKey + R`, then type `shell:startup` and hit `Enter` to get path.
 
-<img src="assets/img/startup.jpg"> <img src="assets/img/startup_path.jpg">
+<img src="assets/img/startup.JPG"> <img src="assets/img/startup_path.JPG">
 
 ```Python
 startup_path = 'C:\\Users\\explo1\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup'
