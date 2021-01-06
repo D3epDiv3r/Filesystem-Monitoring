@@ -27,7 +27,6 @@ Install from PyPI using `pip`:
 python -m pip install -U watchdog
 ```
 
-
 ## Usage Overview
 
 To use this program, all you need to do is change the paths below in the __`main.py`__ file to the corresponding paths on your PC.
@@ -88,4 +87,68 @@ start_file_on_login_path = "C:\\Users\\explo1\\Downloads\\filesystem_monitoring\
 
 ```Python
 startup_path = 'C:\\Users\\explo1\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup'
+```
+
+## Run Program
+
+Navigate to the `src > main.py` location. In your terminal simply type the command below.
+
+```
+python main.py
+```
+
+## Disable Startup Functionality
+
+Ignore this step if you want the program to launch on Startup/Login.
+
+1. Comment out Line 44 and Line 45
+
+Change From:
+
+```Python
+check_path_exists(start_file_on_login_path)
+check_path_exists(startup_path)
+```
+
+To This:
+
+```Python
+# check_path_exists(start_file_on_login_path)
+# check_path_exists(startup_path)
+```
+
+2. Comment out Lines 82 - 85
+
+Change From:
+
+```Python
+def add_to_startup(startup_path, file_path):
+    """ This function makes program Startup on Login"""
+    with open(startup_path + '\\' + "open.bat", "w+") as bat_file:
+        bat_file.write(f'python {file_path}')
+```
+
+To This:
+
+```Python
+# def add_to_startup(startup_path, file_path):
+#     """ This function makes program Startup on Login"""
+#     with open(startup_path + '\\' + "open.bat", "w+") as bat_file:
+#         bat_file.write(f'python {file_path}')
+```
+
+3. Finally, Comment out Line 165
+
+Change From:
+
+```Python
+# Add program to start up
+add_to_startup(startup_path, start_file_on_login_path)
+```
+
+To This:
+
+```Python
+# Add program to start up
+# add_to_startup(startup_path, start_file_on_login_path)
 ```
