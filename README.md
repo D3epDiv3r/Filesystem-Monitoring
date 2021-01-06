@@ -79,10 +79,11 @@ file_name = "monitoring_logs.txt"
 start_file_on_login_path = "C:\\Users\\explo1\\Downloads\\filesystem_monitoring\\src\\main.py"
 ```
 
-    To disable start-up functionality follow the instructions [Here](https://github.com/Chefcury1/Filesystem-Monitoring#disable-startup-functionality)
+To disable start-up functionality follow the instructions [Here](https://github.com/Chefcury1/Filesystem-Monitoring#disable-startup-functionality)
 
 
-- The `startup_path` this is the path to your PC's Startup directory. To find Startup folder path -> press `WinKey + R`, then type `shell:startup` and hit `Enter` to get path.
+- The `startup_path` this is the path to your PC's Startup directory. 
+    To find the Startup folder path -> press `WinKey + R`, then type `shell:startup` and hit `Enter` to bring up the path.
 
     <img src="assets/img/startup.JPG"> <img src="assets/img/startup_path.JPG">
 
