@@ -155,3 +155,7 @@ To This:
 # Add program to start up
 # add_to_startup(startup_path, start_file_on_login_path)
 ```
+
+## Contribute
+
+Fork this [repository](https://github.com/Chefcury1/Filesystem-Monitoring) and send a pull request, report any bug via [GitHub issue tracker](https://github.com/Chefcury1/Filesystem-Monitoring/issues).
