@@ -40,7 +40,9 @@ start_file_on_login_path = "C:\\path_to_main.py_file_on_your_pc\\filesystem_moni
 startup_path = 'C:\\Users\\username\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup'
 ```
 
-For the naming examples below we would use a username called "_explo1_".
+
+
+For the naming examples below we would use a username called "**_`explo1`_**".
 
 __NOTE__: Ensure to include "2 (TWO)" backslash in ALL PATHS BELOW e.g "C:\Users\explo1\Desktop" should be "C:\\Users\\explo1\\Desktop"
 
