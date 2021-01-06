@@ -28,7 +28,7 @@ python -m pip install -U watchdog
 ```
 
 
-## Usage
+## Usage Overview
 
 To use this program, all you need to do is change the paths below in the __`main.py`__ file to the corresponding paths on your PC.
 
@@ -42,15 +42,14 @@ startup_path = 'C:\\Users\\username\\AppData\\Roaming\\Microsoft\\Windows\\Start
 
 For the naming examples below we would use a username called **_`explo1`_**.
 
-__NOTE__: Ensure to include "__2 (TWO)__" __Backslash__ in ALL PATHS BELOW e.g `C:\Users\explo1\Desktop` should be `C:\\Users\\explo1\\Desktop`
+__NOTE__: Ensure to include "__2 (TWO)__" __Backslash__ in all paths below e.g `C:\Users\explo1\Desktop` should be `C:\\Users\\explo1\\Desktop`
 
 
 - The `directories_to_watch` list simply holds all the specified directories you intend to monitor:
 
-    Include directory or directories you want to moitor within double quotes and square brackets: 
-    `directories_to_watch = ["C:\\your_dir"]`
+    Single directory: `directories_to_watch = ["C:\\your_dir"]`
 
-    Seperate Multiple directories with comma ',' e.g `directories_to_watch = ["C:\\your_dir_1", "F:\\your_dir_2"]`
+    Multiple directories: `directories_to_watch = ["C:\\your_dir_1", "F:\\your_dir_2"]`
 
 ```Python
 directories_to_watch = ["C:\\Users\\explo1\\Documents", "C:\\Users\\explo1\\Pictures", "F:\\Programming"]
@@ -58,13 +57,13 @@ directories_to_watch = ["C:\\Users\\explo1\\Documents", "C:\\Users\\explo1\\Pict
 
 
 - The `path_to_write` variable is the path to which the log event file will be stored e.g when a file is "created" or "deleted" the log event will be stored in a text file. This is the path the text file will be saved.
+    
     __NOTE__: Ensure this path is **not included** in the `directories_to_watch` list above.
 
 ```Python
-# NOTE: This path is not included in the "directories_to_watch".
+# NOTE: This path should not be included in the "directories_to_watch".
 path_to_write = "C:\\Users\\explo1\\Desktop"
 ```
-
 
 - The `file_name` variable is the name given to the event log file. This can be renamed accordingly.
 
@@ -73,16 +72,16 @@ file_name = "monitoring_logs.txt"
 ```
 
 
-- The `start_file_on_login_path` this is the path to the __main.py__ file in this program on your PC. This variable is in needed to start the program automatically whenever you log into you system. 
+- The `start_file_on_login_path` this is the path to the __main.py__ file of this program on your PC. This variable is needed to start the program automatically whenever you log into you system. 
+
+To disable start-up functionality follow the instructions [Here](https://github.com/Chefcury1/Filesystem-Monitoring#disable-startup-functionality)
 
 ```Python
 start_file_on_login_path = "C:\\Users\\explo1\\Downloads\\filesystem_monitoring\\src\\main.py"
 ```
 
-To disable start-up functionality follow the instructions [Here](https://github.com/Chefcury1/Filesystem-Monitoring#disable-startup-functionality)
-
-
 - The `startup_path` this is the path to your PC's Startup directory. 
+
     To find the Startup folder path -> press `WinKey + R`, then type `shell:startup` and hit `Enter` to bring up the path.
 
     <img src="assets/img/startup.JPG"> <img src="assets/img/startup_path.JPG">
