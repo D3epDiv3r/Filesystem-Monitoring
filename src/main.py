@@ -58,6 +58,12 @@ class Handler(FileSystemEventHandler):
         with open(storage_path, 'a') as file:
             file.write(f"[!!] Deleted {event.src_path}")
             file.write("\n")
+    # Uncomment this block to Log modifications
+    # def on_modified(self, event):
+    #     # Take any action here when a file is modified.
+    #         with open(storage_path, 'a') as file:
+    #             file.write(f"[!!] Modified {event.src_path}")
+    #             file.write("\n")
     def on_moved(self, event):
         # Take any action here when a file is moved (Renamed).
         with open(storage_path, 'a') as file:
