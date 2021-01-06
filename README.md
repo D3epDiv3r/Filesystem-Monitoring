@@ -97,6 +97,9 @@ Navigate to the `src > main.py` location. In your terminal simply type the comma
 python main.py
 ```
 
+<img src="assets/img/ezgif.com-gif-maker.JPG">
+
+
 ## Disable Startup Functionality
 
 Ignore this step if you want the program to launch on Startup/Login.
