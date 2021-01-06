@@ -36,7 +36,7 @@ To use this program, all you need to do is change the paths below in the "__`mai
 directories_to_watch = ["C:\\your_dir_1", "C:\\your_dir_2", "F:\\your_dir_3", "F:\\your_dir_4"]
 path_to_write = "C:\\your_dir_5"
 file_name = "filesystem_monitoring.txt"
-start_file_on_login_path = "C:\\Users\\username\\path_to_main.py_file_on_your_pc\\filesystem_monitoring\\src\\main.py"
+start_file_on_login_path = "C:\\path_to_main.py_file_on_your_pc\\filesystem_monitoring\\src\\main.py"
 startup_path = 'C:\\Users\\username\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup'
 ```
 
@@ -58,7 +58,8 @@ directories_to_watch = ["C:\\Users\\explo1\\Documents", "C:\\Users\\explo1\\Pict
 The `path_to_write` variable is the path to which the log event file will be stored e.g when a file is "created" or "deleted" the log event will be stored in a text file, and this is the path the log file will be saved. __NOTE__: Ensure this path is **not included** in the `directories_to_watch` list above.
 
 ```Python
-path_to_write = "C:\\Users\\explo1\\Desktop" # NOTE: This path is not included in the "directories_to_watch".
+# NOTE: This path is not included in the "directories_to_watch".
+path_to_write = "C:\\Users\\explo1\\Desktop"
 ```
 
 
@@ -80,8 +81,7 @@ To disable start-up functionality follow the instructions [Here](https://github.
 
 The `startup_path` this is the path to your PC's Startup directory. To find Startup folder path -> press `WinKey + R`, then type `shell:startup` and hit `Enter` to get path.
 
-<img src="assets/img/startup.JPG">
-<img src="assets/img/startup_path.JPG">
+<img src="assets/img/startup.jpg"> <img src="assets/img/startup_path.jpg">
 
 ```Python
 startup_path = 'C:\\Users\\explo1\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup'
