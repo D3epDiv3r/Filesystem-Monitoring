@@ -30,7 +30,7 @@ python -m pip install -U watchdog
 
 ## Usage
 
-To use this program, all you need to do is change the paths below in the "__`main.py`__" file to the corresponding paths on your PC.
+To use this program, all you need to do is change the paths below in the __`main.py`__ file to the corresponding paths on your PC.
 
 ```Python
 directories_to_watch = ["C:\\your_dir_1", "C:\\your_dir_2", "F:\\your_dir_3", "F:\\your_dir_4"]
@@ -40,9 +40,9 @@ start_file_on_login_path = "C:\\path_to_main.py_file_on_your_pc\\filesystem_moni
 startup_path = 'C:\\Users\\username\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup'
 ```
 
-For the naming examples below we would use a username called "**_`explo1`_**".
+For the naming examples below we would use a username called **_`explo1`_**.
 
-__NOTE__: Ensure to include "__2 (TWO)__" __Backslash__ in ALL PATHS BELOW e.g "`C:\Users\explo1\Desktop`" should be "`C:\\Users\\explo1\\Desktop`"
+__NOTE__: Ensure to include "__2 (TWO)__" __Backslash__ in ALL PATHS BELOW e.g `C:\Users\explo1\Desktop` should be `C:\\Users\\explo1\\Desktop`
 
 
 - The `directories_to_watch` list simply holds all the specified directories you intend to monitor:
@@ -50,14 +50,15 @@ __NOTE__: Ensure to include "__2 (TWO)__" __Backslash__ in ALL PATHS BELOW e.g "
     Include directory or directories you want to moitor within double quotes and square brackets: 
     `directories_to_watch = ["C:\\your_dir"]`
 
-    Seperate Multiple directories with comma ',': `directories_to_watch = ["C:\\your_dir_1", "F:\\your_dir_2"]`
+    Seperate Multiple directories with comma ',' e.g `directories_to_watch = ["C:\\your_dir_1", "F:\\your_dir_2"]`
 
 ```Python
 directories_to_watch = ["C:\\Users\\explo1\\Documents", "C:\\Users\\explo1\\Pictures", "F:\\Programming"]
 ```
 
 
-The `path_to_write` variable is the path to which the log event file will be stored e.g when a file is "created" or "deleted" the log event will be stored in a text file, and this is the path the log file will be saved. __NOTE__: Ensure this path is **not included** in the `directories_to_watch` list above.
+- The `path_to_write` variable is the path to which the log event file will be stored e.g when a file is "created" or "deleted" the log event will be stored in a text file. This is the path the text file will be saved.
+    __NOTE__: Ensure this path is **not included** in the `directories_to_watch` list above.
 
 ```Python
 # NOTE: This path is not included in the "directories_to_watch".
@@ -65,25 +66,25 @@ path_to_write = "C:\\Users\\explo1\\Desktop"
 ```
 
 
-The `file_name` variable is the name given to the event log file. This can be renamed accordingly.
+- The `file_name` variable is the name given to the event log file. This can be renamed accordingly.
 
 ```Python
 file_name = "monitoring_logs.txt"
 ```
 
 
-The `start_file_on_login_path` this is the path to the __main.py__ file in this program on your PC. This variable is in needed to start the program automatically whenever you log into you system. 
+- The `start_file_on_login_path` this is the path to the __main.py__ file in this program on your PC. This variable is in needed to start the program automatically whenever you log into you system. 
 
 ```Python
 start_file_on_login_path = "C:\\Users\\explo1\\Downloads\\filesystem_monitoring\\src\\main.py"
 ```
 
-To disable start-up functionality follow the instructions [Here](https://github.com/Chefcury1/Filesystem-Monitoring#disable-startup-functionality)
+    To disable start-up functionality follow the instructions [Here](https://github.com/Chefcury1/Filesystem-Monitoring#disable-startup-functionality)
 
 
-The `startup_path` this is the path to your PC's Startup directory. To find Startup folder path -> press `WinKey + R`, then type `shell:startup` and hit `Enter` to get path.
+- The `startup_path` this is the path to your PC's Startup directory. To find Startup folder path -> press `WinKey + R`, then type `shell:startup` and hit `Enter` to get path.
 
-<img src="assets/img/startup.JPG"> <img src="assets/img/startup_path.JPG">
+    <img src="assets/img/startup.JPG"> <img src="assets/img/startup_path.JPG">
 
 ```Python
 startup_path = 'C:\\Users\\explo1\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup'
