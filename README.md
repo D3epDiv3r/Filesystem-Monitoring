@@ -40,17 +40,15 @@ start_file_on_login_path = "C:\\path_to_main.py_file_on_your_pc\\filesystem_moni
 startup_path = 'C:\\Users\\username\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup'
 ```
 
-
-
 For the naming examples below we would use a username called "**_`explo1`_**".
 
-__NOTE__: Ensure to include "2 (TWO)" backslash in ALL PATHS BELOW e.g "C:\Users\explo1\Desktop" should be "C:\\Users\\explo1\\Desktop"
+__NOTE__: Ensure to include "__2 (TWO)__" __Backslash__ in ALL PATHS BELOW e.g "`C:\Users\explo1\Desktop`" should be "`C:\\Users\\explo1\\Desktop`"
 
 
-The `directories_to_watch` list simply holds all the specified directories you intend to monitor:
+- The `directories_to_watch` list simply holds all the specified directories you intend to monitor:
 
-Include directory or directories you want to moitor within double quotes and square brackets: directories_to_watch = ["C:\\your_dir"]
-Seperate Multiple directories with comma ',' e.g directories_to_watch = ["C:\\your_dir_1", "F:\\your_dir_2"]
+    Include directory or directories you want to moitor within double quotes and square brackets: directories_to_watch = ["C:\\your_dir"]
+    Seperate Multiple directories with comma ',' e.g directories_to_watch = ["C:\\your_dir_1", "F:\\your_dir_2"]
 
 ```Python
 directories_to_watch = ["C:\\Users\\explo1\\Documents", "C:\\Users\\explo1\\Pictures", "F:\\Programming"]
