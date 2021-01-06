@@ -8,6 +8,7 @@ This program uses Tkinter as the control center interface to help start and stop
 
 ## Supported Platforms
 - Windows
+
 A pull request will be appreciated for any other platform integration.
 
 ## Installation
